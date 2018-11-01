@@ -1,0 +1,4 @@
+Sensor:
+down-ramp active 
+RCS output OFF 
+clustering ON 

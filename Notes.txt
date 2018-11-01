@@ -1,0 +1,96 @@
+
+Execution
+
+serial_radar.exe
+
+
+Parameters
+
+--mqtt (mqtt broker)
+--mqtt_port (broker port) 1883 default
+--mqtt_topic (topic for use at the beginning of all topics)
+--commport (port for communication with the device)
+
+
+Example
+
+serial_radar.exe --mqtt tcp://localhost --mqtt_topic test/radar1/ --commport 7
+
+
+Keyboard commands
+
+text can be input for a description of a log entry  
+"return" adds an entry to a "listprint.txt" file with the description and most current target data.
+
+"-" stops execution and exits
+
+
+Config file
+
+A configuration file "config.conf" is created which contains default values obtained from the device. After its creation it	
+		can be modified through the web interface.
+
+These are not configurable (description only)
+    "DeviceAddress": - device address of the unit (always 100 for the 5010)
+    "DeviceName": "iSYS-5010_0000011371",
+    "DspHardwareVersion": "2:1",
+     "ProductInfo": "5010",
+    "RfeHardwareVersion": "2:1",
+    "SerialNumber": "11371",
+	
+Server configuration 
+	
+    "comport": (COMx for the 5010) (should show as "Prolific USB-to-Serial Comm Port (COMx)
+    "mqttbroker": (broker location) 'tcp://' + address
+    "mqttclient": (broker client name)
+    "mqttpassword": (broker password)
+    "mqttport": "1883", (port used by the broker) -- 1883 default 
+    "mqtttopic": "test/radar1/", (top level topic -- usually a unique id from a public broker)
+    "notify": "10", (update rate of the MQTT messages)  
+	
+Sensor configuration
+	
+	"Angle" - angle configured for the unit
+    "FrequencyChannel": "2",
+    "x": "0.0", (x location of the unit)
+    "y": "0.0" (y location of the unit)
+
+
+	
+MQTT Topics
+	"mqtttopic"/targets
+
+	
+MQTT JSON entries (targets)
+	
+		"x" - x coordinate (calculated by the range and angle of the target)
+		"y" - y coordinate (calculated by the range and angle of the target)
+		"r" - range reported by the unit
+		"a" - angle of the target reported by the unit
+		"v" - velocity of the target reported by the unit
+		"time" - time stamp when the message was created
+			
+
+Web interface "localhost:8081/example"
+
+	- Parameters for the server and the sensor are accessible through the interface
+	- Control of acquisition of target data from the sensor. (Start/Stop)
+	a
+Notes:
+- There are diagnostic messages to help in identifying issues. Mostly at the initialization and sparingly during operation.
+- If there are issues with the config file(shouldn't be) it's best to delete it and start fresh. 
+	The system will create a new one with default values.
+- Currently targets are filtered by (range < 10 meters) && (velocity < -.01 || > .01) (only targets within 10 meters that 
+	are moving will be sent).
+- A diagnostic message may appear occasionally indicating an SPI error. It's not fatal since the system will recover very quickly.
+	It occurs on some messages which don't follow the spec. If it does starts occurring frequently there may be a problem with the
+	device or the notify cycle is too short. The time can be extended using the web interface.
+- The radar unit is configured to use clustering. This feature allows multiple targets within a small area to generate only one
+	message. It reduces the amount of extraneous messages generated when a number of objects are detected within this small area.
+	
+	
+
+
+
+
+	

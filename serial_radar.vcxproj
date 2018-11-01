@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="library|Win32">
+      <Configuration>library</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="library|x64">
+      <Configuration>library</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F1DF6A08-F616-4CFD-8F20-951D06501670}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>serial_radarAPI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='library|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='library|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='library|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='library|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='library|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='library|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\rickk\Radar\serial_radar\imports\civetwww\include;C:\Users\rickk\Radar\serial_radar\imports\prebuilt-dll-2-9-1-release\include;..\serial_radar\imports\isys-5010\library_v6.7\include;C:\Users\rickk\Radar\serial_radar\imports\pthreads\include;..\serial_radar\imports\prebuilt-dll-2-9-1-release\include;..\serial_radar\imports\LibFT4222\inc;..\serial_radar\imports\ftd2xx;C:\Users\rickk\opencv-3.4.3\modules\videostab\include;C:\Users\rickk\opencv-3.4.3\modules\stitching\include;C:\Users\rickk\opencv-3.4.3\modules\calib3d\include;C:\Users\rickk\opencv-3.4.3\modules\features2d\include;C:\Users\rickk\opencv-3.4.3\modules\superres\include;C:\Users\rickk\opencv-3.4.3\modules\highgui\include;C:\Users\rickk\opencv-3.4.3\modules\videoio\include;C:\Users\rickk\opencv-3.4.3\modules\shape\include;C:\Users\rickk\opencv-3.4.3\modules\imgcodecs\include;C:\Users\rickk\opencv-3.4.3\modules\dnn\include;C:\Users\rickk\opencv-3.4.3\modules\video\include;C:\Users\rickk\opencv-3.4.3\modules\photo\include;C:\Users\rickk\opencv-3.4.3\modules\objdetect\include;C:\Users\rickk\opencv-3.4.3\modules\ml\include;C:\Users\rickk\opencv-3.4.3\modules\imgproc\include;C:\Users\rickk\opencv-3.4.3\modules\flann\include;C:\Users\rickk\opencv-3.4.3\modules\core\include;C:\Users\rickk\opencv-3.4.3\modules\world\include;C:\Users\rickk\openCVx86\3rdparty\ippicv\ippicv_win\include;C:\Users\rickk\openCVx86\3rdparty\ippicv\ippiw_win\include;C:\Users\rickk\openCVx86;C:\Users\rickk\paho.mqtt.cpp\src\samples;C:\Users\rickk\paho.mqtt.c\src;C:\Users\rickk\paho.mqtt.c\include;C:\Users\rickk\paho.mqtt.cpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>LibFT4222.lib;ftd2xx.lib;serial_radarAPI.lib;opencv_world343d.lib;paho-mqtt3a.lib;paho-mqttpp3.lib;pthreadVCE2.lib;pthreadVC2.lib;pthreadVSE2.lib;ex_embed_cppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\serial_radar\imports\isys-5010\library_v6.7\lib_msvc;..\serial_radar\imports\pthreads\lib\x86;C:\Users\rickk\openCVx86\lib\Release;..\serial_radar\lib;..\serial_radar\imports\ftd2xx\i386;..\serial_radar\imports\LibFT4222\lib;C:\Users\rickk\Radar\serial_radar\imports\libopencvmodified;C:/Users/rickk/paho.mqtt.c/build/src;C:/Users/rickk/paho.mqtt.c/build/src/$(Configuration);C:/Users/rickk/paho.mqtt.cpp/build/src;C:/Users/rickk/paho.mqtt.cpp/build/src/$(Configuration);..\serial_radar\imports\civetwww\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\rickk\OpenCV\opencv\build\include;..\serial_radar\imports\LibFT4222\inc;..\serial_radar\imports\ftd2xx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>LibFT4222.lib;ftd2xx.lib;serial_radarAPI.lib;opencv_world343.lib;opencv_world343d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\rickk\OpenCV\opencv\build\x64\vc15\lib;..\serial_radar\lib;..\serial_radar\imports\ftd2xx\i386;..\serial_radar\imports\LibFT4222\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\rickk\Radar\serial_radar\imports\civetwww\include;..\serial_radar\imports\pthreads\include;..\serial_radar\imports\json;..\serial_radar\imports\isys-5010\library_v6.7\include;..\serial_radar\imports\prebuilt-dll-2-9-1-release\include;..\serial_radar\imports\LibFT4222\inc;..\serial_radar\imports\ftd2xx;C:\Users\rickk\opencv-3.4.3\modules\videostab\include;C:\Users\rickk\opencv-3.4.3\modules\stitching\include;C:\Users\rickk\opencv-3.4.3\modules\calib3d\include;C:\Users\rickk\opencv-3.4.3\modules\features2d\include;C:\Users\rickk\opencv-3.4.3\modules\superres\include;C:\Users\rickk\opencv-3.4.3\modules\highgui\include;C:\Users\rickk\opencv-3.4.3\modules\videoio\include;C:\Users\rickk\opencv-3.4.3\modules\shape\include;C:\Users\rickk\opencv-3.4.3\modules\imgcodecs\include;C:\Users\rickk\opencv-3.4.3\modules\dnn\include;C:\Users\rickk\opencv-3.4.3\modules\video\include;C:\Users\rickk\opencv-3.4.3\modules\photo\include;C:\Users\rickk\opencv-3.4.3\modules\objdetect\include;C:\Users\rickk\opencv-3.4.3\modules\ml\include;C:\Users\rickk\opencv-3.4.3\modules\imgproc\include;C:\Users\rickk\opencv-3.4.3\modules\flann\include;C:\Users\rickk\opencv-3.4.3\modules\core\include;C:\Users\rickk\opencv-3.4.3\modules\world\include;C:\Users\rickk\openCVx86\3rdparty\ippicv\ippicv_win\include;C:\Users\rickk\openCVx86\3rdparty\ippicv\ippiw_win\include;C:\Users\rickk\openCVx86;C:\Users\rickk\paho.mqtt.cpp\src\samples;C:\Users\rickk\paho.mqtt.c\src;C:\Users\rickk\paho.mqtt.c\include;C:\Users\rickk\paho.mqtt.cpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>LibFT4222.lib;ftd2xx.lib;serial_radarAPI.lib;opencv_world343d.lib;paho-mqtt3a.lib;paho-mqttpp3.lib;pthreadVCE2.lib;pthreadVC2.lib;pthreadVSE2.lib;ex_embed_cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\serial_radar\imports\isys-5010\library_v6.7\lib_msvc;..\serial_radar\imports\pthreads\lib\x86;C:\Users\rickk\openCVx86\lib\Release;..\serial_radar\lib;..\serial_radar\imports\ftd2xx\i386;..\serial_radar\imports\LibFT4222\lib;C:\Users\rickk\Radar\serial_radar\imports\libopencvmodified;C:/Users/rickk/paho.mqtt.c/build/src;C:/Users/rickk/paho.mqtt.c/build/src/$(Configuration);C:/Users/rickk/paho.mqtt.cpp/build/src;C:/Users/rickk/paho.mqtt.cpp/build/src/$(Configuration);..\serial_radar\imports\civetwww\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='library|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\rickk\Radar\serial_radar\imports\prebuilt-dll-2-9-1-release\include;..\serial_radar\imports\LibFT4222\inc;..\serial_radar\imports\ftd2xx;C:\Users\rickk\opencv-3.4.3\modules\videostab\include;C:\Users\rickk\opencv-3.4.3\modules\stitching\include;C:\Users\rickk\opencv-3.4.3\modules\calib3d\include;C:\Users\rickk\opencv-3.4.3\modules\features2d\include;C:\Users\rickk\opencv-3.4.3\modules\superres\include;C:\Users\rickk\opencv-3.4.3\modules\highgui\include;C:\Users\rickk\opencv-3.4.3\modules\videoio\include;C:\Users\rickk\opencv-3.4.3\modules\shape\include;C:\Users\rickk\opencv-3.4.3\modules\imgcodecs\include;C:\Users\rickk\opencv-3.4.3\modules\dnn\include;C:\Users\rickk\opencv-3.4.3\modules\video\include;C:\Users\rickk\opencv-3.4.3\modules\photo\include;C:\Users\rickk\opencv-3.4.3\modules\objdetect\include;C:\Users\rickk\opencv-3.4.3\modules\ml\include;C:\Users\rickk\opencv-3.4.3\modules\imgproc\include;C:\Users\rickk\opencv-3.4.3\modules\flann\include;C:\Users\rickk\opencv-3.4.3\modules\core\include;C:\Users\rickk\opencv-3.4.3\modules\world\include;C:\Users\rickk\openCVx86\3rdparty\ippicv\ippicv_win\include;C:\Users\rickk\openCVx86\3rdparty\ippicv\ippiw_win\include;C:\Users\rickk\openCVx86;C:\Users\rickk\paho.mqtt.cpp\src\samples;C:\Users\rickk\paho.mqtt.c\src;C:\Users\rickk\paho.mqtt.c\include;C:\Users\rickk\paho.mqtt.cpp\src;C:\Users\rickk\Radar\serial_radar\imports\civetwww\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>LibFT4222.lib;ftd2xx.lib;serial_radarAPI.lib;opencv_world343d.lib;paho-mqtt3a.lib;paho-mqttpp3.lib;pthreadVCE2.lib;pthreadVC2.lib;pthreadVSE2.lib;ex_embed_cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\rickk\Radar\serial_radar\imports\civetwww;C:\Users\rickk\Radar\serial_radar\imports\prebuilt-dll-2-9-1-release\lib\x86;C:\Users\rickk\openCVx86\lib\Release;..\serial_radar\lib;..\serial_radar\imports\ftd2xx\i386;..\serial_radar\imports\LibFT4222\lib;C:\Users\rickk\Radar\serial_radar\imports\libopencvmodified;C:/Users/rickk/paho.mqtt.c/build/src;C:/Users/rickk/paho.mqtt.c/build/src/$(Configuration);C:/Users/rickk/paho.mqtt.cpp/build/src;C:/Users/rickk/paho.mqtt.cpp/build/src/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>serial_radarAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='library|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>serial_radarAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="async_publish.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="ConfigPageHandler.cpp" />
+    <ClCompile Include="pthreadcode.cpp" />
+    <ClCompile Include="serial_radar.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="spiusb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="async_publish.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="ConfigPageHandler.h" />
+    <ClInclude Include="imports\isys-5010\library_v6.7\include\serial_radarAPI_basicTypes.h" />
+    <ClInclude Include="imports\isys-5010\library_v6.7\include\serial_radarAPI_enums.h" />
+    <ClInclude Include="imports\isys-5010\library_v6.7\include\serial_radarAPI_if.h" />
+    <ClInclude Include="imports\json\json.hpp" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="pthreaddefs.h" />
+    <ClInclude Include="imports\ftd2xx\ftd2xx.h" />
+    <ClInclude Include="imports\LibFT4222\inc\LibFT4222.h" />
+    <ClInclude Include="SerialCamera.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="imports\isys-5010\library_v6.7\lib_msvc\serial_radarAPI.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imports\isys-5010\library_v6.7\lib_msvc\serial_radarAPI.dll" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
